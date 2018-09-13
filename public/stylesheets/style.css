@@ -1,0 +1,15 @@
+@media (min-width: 992px) {
+  .navbar.navbar-dark {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-nav li {
+    padding: .75em 1.5em;
+  }
+
+  .active {
+    margin: 0;
+    background: #212021;
+  }
+}
