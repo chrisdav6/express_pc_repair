@@ -1,3 +1,7 @@
+html, body {
+  min-height: 100vh;
+}
+
 @media (min-width: 992px) {
   .navbar.navbar-dark {
     padding-top: 0;
