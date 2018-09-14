@@ -1,28 +1,31 @@
 <%- include partials/header.ejs %>
 
-<section id="services" class="d-flex mt-auto">
+<section id="about" class="my-5">
   <div class="container">
     <div class="row text-center text-md-left">
       <div class="col">
         <h1 class="display-4 mb-4">Services</h1>
-        <hr>
-        <p class="lead">Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a
-          comic, you know how you
-          can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're
-          friends,
-          like you and me! I should've known way back when... You know why, David? Because of the kids. They called me
-          Mr
-          Glass.</p>
+        <hr class="mb-5">
 
-        <p class="lead mb-0">The path of the righteous man is beset on all sides by the iniquities of the selfish and
-          the tyranny of evil men.
-          Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness,
-          for he is
-          truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great
-          vengeance and
-          furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the
-          Lord when I
-          lay My vengeance upon thee. </p>
+        <div class="row">
+          <% services.forEach((service) => { %>
+          <div class="col-lg-3 col-md-6">
+            <div class="card mb-5 mb-lg-0">
+              <h5 class="card-header"><%= service.name %></h5>
+              <div class="card-body">
+                <p class="card-text"><%= service.description %></p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item text-success"><%= service.price_range %></li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="btn btn-primary">Let's Do It!</a>
+              </div>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+
       </div>
     </div>
   </div>
