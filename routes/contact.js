@@ -25,8 +25,8 @@ router.post("/send", (req, res, next) => {
       html += `<p>Message: <br> ${message}</p>`;
 
   const mailOptions = {
-    from: '"Chris Davis ?" <chris.davis5440@gmail.com>',
-    to: '"Chris Davis ?" <chris.davis5440@gmail.com>',
+    from: '"Chris Davis" <chris.davis5440@gmail.com>',
+    to: '"Chris Davis" <chris.davis5440@gmail.com>',
     subject: 'Hello from PC Repair MoFo!',
     text: 'You have a submission from... Name: ' + name,
     html: html
