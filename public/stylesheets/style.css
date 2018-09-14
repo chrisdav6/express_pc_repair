@@ -2,6 +2,10 @@ html, body {
   min-height: 100vh;
 }
 
+label {
+  font-size: 1.2rem;
+}
+
 @media (min-width: 992px) {
   .navbar.navbar-dark {
     padding-top: 0;
@@ -15,5 +19,12 @@ html, body {
   .active {
     margin: 0;
     background: #212021;
+  }
+}
+
+@media (max-width: 768px) {
+  .submitBtn {
+    display: block;
+    width: 100%;
   }
 }
