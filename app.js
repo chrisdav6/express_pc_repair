@@ -4,7 +4,10 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
-const getRoutes = require("./routes/getRoutes");
+const index = require("./routes/index");
+const about = require("./routes/about");
+const services = require("./routes/services");
+const contact = require("./routes/contact");
 
 const app = express();
 
@@ -20,10 +23,10 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "/node_modules/bootstrap/dist")));
 app.use(express.static(path.join(__dirname, "/node_modules/jquery/dist")));
 
-app.use("/", getRoutes);
-app.use("/about", getRoutes);
-app.use("/services", getRoutes);
-app.use("/contact", getRoutes);
+app.use("/", index);
+app.use("/about", about);
+app.use("/services", services);
+app.use("/contact", contact);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
