@@ -1,33 +1,30 @@
 <%- include partials/header.ejs %>
 
-<section id="about" class="my-5">
+<section id="about" class="my-5 text-center text-md-left">
   <div class="container">
-    <div class="row text-center text-md-left">
-      <div class="col">
-        <h1 class="display-4 mb-4">Services</h1>
-        <hr class="mb-5">
 
-        <div class="row">
-          <% services.forEach((service) => { %>
-          <div class="col-lg-3 col-md-6">
-            <div class="card mb-5 mb-lg-0">
-              <h5 class="card-header"><%= service.name %></h5>
-              <div class="card-body">
-                <p class="card-text"><%= service.description %></p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item text-success"><%= service.price_range %></li>
-              </ul>
-              <div class="card-body">
-                <a href="#" class="btn btn-primary">Let's Do It!</a>
-              </div>
-            </div>
+    <h1 class="display-4 mb-4">Services</h1>
+    <hr class="mb-5">
+
+    <div class="row">
+      <% services.forEach((service) => { %>
+      <div class="col-lg-3 col-md-6">
+        <div class="card mb-5 mb-lg-0">
+          <h5 class="card-header"><%= service.name %></h5>
+          <div class="card-body">
+            <p class="card-text"><%= service.description %></p>
           </div>
-          <% }) %>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-success"><%= service.price_range %></li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="btn btn-primary">Let's Do It!</a>
+          </div>
         </div>
-
       </div>
+      <% }) %>
     </div>
+
   </div>
 </section>
 
