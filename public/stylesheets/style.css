@@ -6,6 +6,11 @@ label {
   font-size: 1.2rem;
 }
 
+#banner {
+  background: #E9ECEF;
+  padding: 6em 0;
+}
+
 @media (min-width: 992px) {
   .navbar.navbar-dark {
     padding-top: 0;
